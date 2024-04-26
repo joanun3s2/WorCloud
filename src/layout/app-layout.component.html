@@ -1,40 +1,82 @@
 <header class="navbar navbar-dark bg-primary navbar-expand-lg py-3">
   <div class="container">
-    <a class="navbar-brand" [routerLink]="['/dashboard']">
-      <img src="../assets/images/logo.png" height="70" />
-    </a>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarNav"
-      aria-controls="navbarNav"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
-          <a
-            class="nav-link"
-            [routerLink]="['/dashboard']"
-            [routerLinkActive]="['active']"
-            >Dashboard</a
-          >
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Profile</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" [routerLink]="['/login']">Logout</a>
-        </li>
-      </ul>
+    <div class="row w-100 align-items-center">
+      <div class="col-auto">
+        <a class="navbar-brand" [routerLink]="['/dashboard']">
+          <img src="../assets/images/logo.png" height="70" />
+        </a>
+      </div>
+
+      <div class="col-4 me-auto">
+        <div class="input-group">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Search"
+            aria-label="Search"
+            aria-describedby="button-addon2"
+          />
+          <button class="btn bg-white" type="button" id="button-addon2">
+            <i class="fa fa-search"></i>
+          </button>
+        </div>
+      </div>
+      <div class="col-auto">
+        <div>
+          <i class="fa fa-bell font-white fs-4"></i>
+        </div>
+      </div>
+      <div class="col-auto">
+        <div class="d-flex align-items-center">
+          <p class="me-3 mb-0 font-white fs-5">Joao</p>
+          <img
+            src="../assets/images/avatar.jpeg"
+            class="rounded-circle"
+            height="60"
+          />
+        </div>
+      </div>
     </div>
   </div>
 </header>
 
-<div class="container mt-4">
+<div class="container mt-4 content-container">
   <ng-content></ng-content>
 </div>
+
+<footer class="bg-primary py-5">
+  <div class="container">
+    <div class="row w-100 align-items-center">
+      <div class="col-auto">
+        <img src="../assets/images/logo.png" height="100" />
+      </div>
+      <div class="col-7">
+        <p class="fs-6 fw-bold font-white mb-0">
+          Lorem ipsum dolor sit amet consectetur.
+        </p>
+        <p class="fs-6 font-white mb-0">
+          Quisque nulla et ac leo non a nec phasellus. Pellentesque lacus non
+          nibh quis. Dui phasellus eu ultrices posuere mi pulvinar. Vestibulum
+          eget dolor interdum orci pretium.
+        </p>
+      </div>
+      <div class="col-auto d-flex align-items-center">
+        <ul class="font-white">
+          <li>Link</li>
+          <li>Link</li>
+          <li>Link</li>
+        </ul>
+        <ul class="font-white">
+          <li>Link</li>
+          <li>Link</li>
+          <li>Link</li>
+        </ul>
+      </div>
+      <div class="col-auto d-flex align-items-center justify-content-evenly">
+        <div class="rounded-circle bg-grey p-4 me-3"></div>
+        <div class="rounded-circle bg-grey p-4 me-3"></div>
+        <div class="rounded-circle bg-grey p-4"></div>
+      </div>
+    </div>
+  </div>
+</footer>
