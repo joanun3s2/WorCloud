@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-communities',
   standalone: true,
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './communities.component.html',
-  styleUrl: './communities.component.scss'
+  styleUrl: './communities.component.scss',
 })
-export class CommunitiesComponent {
-
-}
+export class CommunitiesComponent {}
