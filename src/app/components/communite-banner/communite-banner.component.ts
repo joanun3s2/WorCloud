@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-communite-banner',
   standalone: true,
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './communite-banner.component.html',
-  styleUrl: './communite-banner.component.scss'
+  styleUrl: './communite-banner.component.scss',
 })
-export class CommuniteBannerComponent {
-
-}
+export class CommuniteBannerComponent {}
